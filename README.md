@@ -4,7 +4,7 @@ Hello, and welcome to zapper.
 
 In this project I tried to create a simple app that would send and recieve messages.
 
-<img src='./assets/screenshot.png' />
+<img src='./assets/screenshot.jpg' />
 
 # Link to deploy
 
