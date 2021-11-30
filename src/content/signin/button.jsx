@@ -2,10 +2,13 @@
 import styled from 'styled-components';
 import postSignin from '../../services/service.signin';
 import { useNavigate } from 'react-router-dom';
+import { useContext } from 'react';
+import UserContext from '../../context/userContext';
 
 const Button = (props) => {
-  const { username, password } = props;
+  const { password } = props;
   const navigate = useNavigate();
+  const { username } = useContext(UserContext);
 
   const signInUser = () => {
     if (username !== '' && password !== '') {
@@ -27,7 +30,7 @@ const Button = (props) => {
 
       return;
     }
-    alert('Preencha os dados corretamente por favor');
+    alert('Fill in all data please');
     return;
   };
 

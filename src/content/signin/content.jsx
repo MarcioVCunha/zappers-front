@@ -1,11 +1,12 @@
-import { useState } from 'react';
+import { useContext, useState } from 'react';
 import styled from 'styled-components';
 import Inputs from '../shared/input';
 import Button from './button';
 import Link from '../shared/link.jsx';
+import UserContext from '../../context/userContext';
 
 const Content = () => {
-  const [username, setUsername] = useState('');
+  const { username, setUsername } = useContext(UserContext);
   const [password, setPassword] = useState('');
 
   return (
