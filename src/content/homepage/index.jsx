@@ -50,7 +50,9 @@ const Homepage = () => {
 
   const sendMessage = () => {
     sendMessageToBack({ messageToSend, token: localStorage.getItem('token') })
-      .then()
+      .then(() => {
+        setMessages('');
+      })
       .catch(() => {
         alert('We are having problem in the server');
         navigate('/');
