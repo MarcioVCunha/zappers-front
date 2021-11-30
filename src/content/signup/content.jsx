@@ -1,12 +1,13 @@
-import { useState } from 'react';
+import { useContext, useState } from 'react';
 import styled from 'styled-components';
+import UserContext from '../../context/userContext';
 import Inputs from '../shared/input';
 import Link from '../shared/link';
 import Button from './button';
 
 const Content = () => {
-  const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
+  const { username, setUsername } = useContext(UserContext);
 
   return (
     <Container>

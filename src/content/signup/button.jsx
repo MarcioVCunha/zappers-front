@@ -1,11 +1,14 @@
 /* eslint-disable react/prop-types */
+import { useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
+import UserContext from '../../context/userContext';
 import postSignup from '../../services/service.signup';
 
 const Button = (props) => {
-  const { username, password } = props;
+  const { password } = props;
   const navigate = useNavigate();
+  const { username } = useContext(UserContext);
 
   const createUser = () => {
     if (username !== '' && password !== '') {
@@ -27,7 +30,7 @@ const Button = (props) => {
 
       return;
     }
-    alert('Preencha os dados corretamente por favor');
+    alert('Fill in all data correct please');
     return;
   };
 
