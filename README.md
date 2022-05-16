@@ -33,7 +33,7 @@ Then. we have to install the dependecies
 
     npm i
 
-Finaly, in the front root, just use the
+Finally, in the front root, just use the
 
     npm start
   
