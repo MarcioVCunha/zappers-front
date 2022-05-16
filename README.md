@@ -29,7 +29,11 @@ Next, you will have to setup the back, you can find it here:
 
     https://github.com/MarcioVCunha/zappers-back
 
-After that, in the front root, just use the
+Then. we have to install the dependecies
+
+    npm i
+
+Finaly, in the front root, just use the
 
     npm start
   
